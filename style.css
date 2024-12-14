@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 9%;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    color: #333;
+    text-align: center;
+}
+.service .heading{
+    border-radius: 1rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+
+}
+.service .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+}
+.wrapper .box{
+    
+    padding: 3rem 2rem;
+    background-color: #FAF9F6;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  }
+
+.box i{
+    gap: 2rem;
+    font-size: 4rem;
+    color: #7494ec;
+}
+.box h2{
+    font-size: 2.5rem;
+}
+.box p{
+    margin: 1rem 0 1.8rem;
+}
+.box .btn{
+    display: inline-block;
+    padding: .8rem 2rem;
+    background: #7494ec;
+    border: .2rem solid #7494ec;
+    border-radius: .6rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s ease;
+   
+}
+.box .btn:hover{
+    background: transparent;
+    color: #7494ec;
+}
+@media screen and (max-width: 992px) {
+    .service{
+        padding: 2rem 5%;
+    }
+}
+@media screen and (max-width: 980px) {
+    .service{
+        padding: 2rem 3%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .service .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 620px) {
+    .service .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
